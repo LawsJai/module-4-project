@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coding Quiz by Jai Lawson</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Coding Quiz </h1>
+      <form id="quiz-form">
+        <div class="form-group">
+          <label for="q1">Question 1: What is JavaScript?</label>
+          <div class="radio">
+            <label><input type="radio" name="q1" value="a">a) An scripting language use to create dynamic content</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="q1" value="b">b) A cup of coffee</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="q1" value="c">c) A battery</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+        <div class="form-group">
+          <label for="q2">Question 2: What is CSS used for?</label>
+          <div class="radio">
+            <label><input type="radio" name="q2" value="a">a) Is used as a language to describe the presentations of web pages, including colors, layout and fonts</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="q2" value="b">b) You put it in your car</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="q2" value="c">c) My aunt has one</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    
+    <div class="form-group">
+        <label for="q3">Question 3: What is needed to implement bootstrap into html?</label>
+        <div class="radio">
+          <label><input type="radio" name="q3" value="a">a) A belt</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="q3" value="b">b) A link</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="q3" value="c">c) A buckle</label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  
+  <div class="form-group">
+    <label for="q4">Question 4: What does HTML stand for? </label>
+    <div class="radio">
+      <label><input type="radio" name="q4" value="a">a) HelloThere My Love</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="q4" value="b">b) HenryTells Me Lie</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="q4" value="c">c) HyperText Markup language</label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<div class="form-group">
+    <label for="q5">Question 5: Who invented coding? </label>
+    <div class="radio">
+      <label><input type="radio" name="q2" value="a">a) Antonin Dvorak</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="q2" value="b">b) Sister Rosetta Tharpe</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="q2" value="c">c)  Ada Lovelace</label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</div>
+</div>
+</div></form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="javascript.js"></script>
+    <script src="Questquiz.js"></script>
+    
+    <script>
+      $(function() {
+        $('#quiz-form').on('submit', function(e) {
+          e.preventDefault();
+          var q1 = $('input[name=q1]:checked', '#quiz-form').val();
+          var q2 = $('input[name=q2]:checked', '#quiz-form').val();
+          var q3 = $('input[name=q2]:checked', '#quiz-form').val();
+          var q4 = $('input[name=q2]:checked', '#quiz-form').val();
+          var q5 = $('input[name=q2]:checked', '#quiz-form').val();
+          var score = 0;
+          if (q1 === 'a') {
+            score += 1;
+          }
+          if (q2 === 'a') {
+            score += 1;
+          }
+          if (q3 === 'b') {
+            score += 1;
+          }
+          if (q4 === 'c') {
+            score += 1;
+
+          }
+          if (q5 === 'c') {
+            score += 1;
+
+          }
+          alert('Your score is ' + score + ' out of 5');
+        });
+      });
+    </script>
+  </body>
+</html>
